@@ -1,6 +1,15 @@
+import math
+
 def area(a, b, c):
-    return (a + b + c) / 2
+    if (a < b + c and b < a + c and c < a + b):
+        p = (a + b + c) / 2
+        return math.sqrt(p * (p-a) * (p-b) * (p-c))
+    else:
+        return "Triangle doesn't exist"
 
 
 def perimeter(a, b, c):
-    return a + b + c
+    if (a < b + c and b < a + c and c < a + b):
+        return a + b + c
+    else:
+        return "Triangle doesn't exist"
