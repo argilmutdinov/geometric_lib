@@ -6,13 +6,8 @@ figs = ['circle', 'square']
 funcs = ['perimeter', 'area']
 sizes = {}
 
- """
-    Принимает тип фигуры fig, название функции func и размер для данной фигуры size.
-
-    Возвращает результат переданной операции для данной фигуры данного размера result.
- """
 def calc(fig, func, size):
-  
+	
 	if fig not in figs:
 		return "Not correct figure name"
 	if func not in funcs:
@@ -24,7 +19,6 @@ def calc(fig, func, size):
 
 	result = eval(f'{fig}.{func}({size[0]})')
 	return result
-
 
 
 if __name__ == "__main__":
