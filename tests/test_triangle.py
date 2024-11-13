@@ -1,5 +1,6 @@
 import triangle
 
+
 def test_circle_area_1():
     a_side = 10
     b_side = 10
@@ -8,6 +9,7 @@ def test_circle_area_1():
     res = triangle.area(a_side, b_side, c_side)
 
     assert int(res) == 43
+
 
 def test_circle_area_1():
     a_side = 2
@@ -18,6 +20,7 @@ def test_circle_area_1():
 
     assert res == "Triangle doesn't exist"
 
+
 def test_circle_perimeter_1():
     a_side = 3
     b_side = 4
@@ -26,6 +29,7 @@ def test_circle_perimeter_1():
     res = triangle.perimeter(a_side, b_side, c_side)
 
     assert res == 12
+
 
 def test_circle_perimeter_2():
     a_side = 13

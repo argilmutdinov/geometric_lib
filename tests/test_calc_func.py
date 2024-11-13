@@ -1,5 +1,6 @@
 from calculate import calc
 
+
 def test_correct_figure_params_1():
     fig = "square"
     func = "perimeter"
@@ -8,6 +9,7 @@ def test_correct_figure_params_1():
     res = calc(fig, func, sides)
 
     assert int(res) == 40
+
 
 def test_correct_figure_params_2():
     fig = "circle"
@@ -18,6 +20,7 @@ def test_correct_figure_params_2():
 
     assert int(res) == 628
 
+
 def test_correct_figure_params_3():
     fig = "square"
     func = "area"
@@ -26,6 +29,7 @@ def test_correct_figure_params_3():
     res = calc(fig, func, sides)
 
     assert int(res) == 9
+
 
 def test_correct_figure_params_4():
     fig = "circle"
@@ -36,6 +40,7 @@ def test_correct_figure_params_4():
 
     assert int(res) == 201
 
+
 def test_incorrect_figure_params_1():
     fig = "cirkle"
     func = "area"
@@ -44,6 +49,7 @@ def test_incorrect_figure_params_1():
     res = calc(fig, func, sides)
 
     assert res == "Not correct figure name"
+
 
 def test_incorrect_figure_params_2():
     fig = "circle"
@@ -54,6 +60,7 @@ def test_incorrect_figure_params_2():
 
     assert res == "Not correct function name"
 
+
 def test_incorrect_figure_params_3():
     fig = "squre"
     func = "perimetr"
@@ -62,6 +69,7 @@ def test_incorrect_figure_params_3():
     res = calc(fig, func, sides)
 
     assert res == "Not correct figure name"
+
 
 def test_incorrect_figure_params_4():
     fig = "square"
