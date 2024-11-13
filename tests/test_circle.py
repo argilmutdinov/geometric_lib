@@ -31,4 +31,4 @@ def test_circle_perimeter_2():
 
     res = circle.perimeter(radius)
 
-    assert res == 2*math.pi
+    assert res == 2 * math.pi
