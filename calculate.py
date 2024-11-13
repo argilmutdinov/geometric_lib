@@ -10,11 +10,12 @@ sizes = {}
 def calc(fig, func, size):
 
 	"""
-    Принимает тип фигуры fig, название функции func и размер для данной фигуры size.
+	Принимает тип фигуры fig,
+	название функции func и размер для данной фигуры size.
+	Возвращает результат переданной операции
+	для данной фигуры данного размера result.
+	"""
 
-    Возвращает результат переданной операции для данной фигуры данного размера result.
-    """
-	
 	if fig not in figs:
 		return "Not correct figure name"
 	if func not in funcs:
@@ -32,7 +33,7 @@ if __name__ == "__main__":
 	func = ''
 	fig = ''
 	size = list()
-    
+	
 	while fig not in figs:
 		fig = input(f"Enter figure name, avaliable are {figs}:\n")
 	
