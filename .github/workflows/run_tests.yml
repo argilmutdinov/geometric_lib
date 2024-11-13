@@ -34,8 +34,8 @@ jobs:
               run: pip install -r requirements.txt
             - name: check code style
               run: |
-                pip install black
-                black --config ./.black
+                pip install flake8
+                flake8 --config .flake8
             - name: Run tests
               run: pytest
             

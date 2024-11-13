@@ -11,7 +11,7 @@ def test_circle_area_1():
     assert int(res) == 43
 
 
-def test_circle_area_1():
+def test_circle_area_2():
     a_side = 2
     b_side = 4
     c_side = 6
