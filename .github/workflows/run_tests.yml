@@ -1,0 +1,41 @@
+name: Automated tests
+
+on: 
+    push:
+        branches:
+            - 'main'
+            - 'release'
+    pull_request:
+        branches:
+            - 'master'
+            - 'release'
+            - 'develop'
+
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: name and group
+              run: |
+                echo "$NAME $GROUP"
+                echo "$GITHUB_ACTOR"
+              env:
+                NAME: Гильмутдинов Александр Ренатович
+                GROUP: M3116
+            - name: Checkout repository
+              uses: actions/checkout@v4
+            - name: Setup Python
+              uses: actions/setup-python@v3
+              with:
+                python-version: '3.10'
+            - name: Install dependencies
+              run: pip install -r requirements.txt
+            - name: check code style
+              run: |
+                pip install flake8
+                flake8
+            - name: Run tests
+              run: pytest
+            
