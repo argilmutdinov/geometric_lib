@@ -8,7 +8,7 @@ def area(a, b, c):
     """
 
     try:
-        if not(a < b + c and b < a + c and c < a + b):
+        if not (a < b + c and b < a + c and c < a + b):
             raise ValueError
     except Exception:
         return "Triangle doesn't exist"
@@ -24,7 +24,7 @@ def perimeter(a, b, c):
     """
 
     try:
-        if not(a < b + c and b < a + c and c < a + b):
+        if not (a < b + c and b < a + c and c < a + b):
             raise ValueError
     except Exception:
         return "Triangle doesn't exist"
