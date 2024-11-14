@@ -17,15 +17,20 @@ def calc(fig, func, size):
 	"""
 
 	try:
-		return eval(f'{fig}.{func}({size[0]})')
-	except fig not in figs:
-		return "Not correct figure name"
-	except func not in funcs:
-		return "Not correct function name"
-	except (len(size) > 1) and (fig == "circle" or fig == "square"):
-		return "Too many figure sides to calc"
-	except (len(size) == 0) and (fig == "circle" or fig == "square"):
-		return "No figure sides inputed"
+		if len(size) > 1:
+			raise ValueError
+		result = eval(f'{fig}.{func}({size[0]})')
+	except:
+		if fig not in figs:
+			return "Not correct figure name"
+		if func not in funcs:
+			return "Not correct function name"
+		if len(size) > 1 and (fig == "circle" or fig == "square"):
+			return "Too many figure sides to calc"
+		if len(size) == 0 and (fig == "circle" or fig == "square"):
+			return "No figure sides inputed"
+	else:
+		return result
 
 
 if __name__ == "__main__":

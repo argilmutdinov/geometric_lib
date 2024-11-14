@@ -1,5 +1,5 @@
 from calculate import calc
-
+import pytest
 
 def test_correct_figure_params_1():
     fig = "square"
