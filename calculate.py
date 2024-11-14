@@ -20,7 +20,7 @@ def calc(fig, func, size):
 		if len(size) > 1:
 			raise ValueError
 		result = eval(f'{fig}.{func}({size[0]})')
-	except:
+	except Exception:
 		if fig not in figs:
 			return "Not correct figure name"
 		if func not in funcs:

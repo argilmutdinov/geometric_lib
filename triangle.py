@@ -8,13 +8,14 @@ def area(a, b, c):
     """
 
     try:
-        if (a < b + c and b < a + c and c < a + b) == False:
+        if not(a < b + c and b < a + c and c < a + b):
             raise ValueError
-    except:
+    except Exception:
         return "Triangle doesn't exist"
     else:
         p = (a + b + c) / 2
         return math.sqrt(p * (p - a) * (p - b) * (p - c))
+
 
 def perimeter(a, b, c):
     """
@@ -23,9 +24,9 @@ def perimeter(a, b, c):
     """
 
     try:
-        if (a < b + c and b < a + c and c < a + b) == False:
+        if not(a < b + c and b < a + c and c < a + b):
             raise ValueError
-    except:
+    except Exception:
         return "Triangle doesn't exist"
     else:
         return a + b + c
