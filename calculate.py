@@ -16,17 +16,16 @@ def calc(fig, func, size):
 	для данной фигуры данного размера result.
 	"""
 
-	if fig not in figs:
+	try:
+		return eval(f'{fig}.{func}({size[0]})')
+	except fig not in figs:
 		return "Not correct figure name"
-	if func not in funcs:
+	except func not in funcs:
 		return "Not correct function name"
-	if len(size) > 1 and (fig == "circle" or fig == "square"):
+	except (len(size) > 1) and (fig == "circle" or fig == "square"):
 		return "Too many figure sides to calc"
-	if len(size) == 0 and (fig == "circle" or fig == "square"):
+	except (len(size) == 0) and (fig == "circle" or fig == "square"):
 		return "No figure sides inputed"
-
-	result = eval(f'{fig}.{func}({size[0]})')
-	return result
 
 
 if __name__ == "__main__":

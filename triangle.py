@@ -18,7 +18,7 @@ def perimeter(a, b, c):
     Принимает три стороны треугольника a b c.
     Возвращает периметр треугольника
     """
-    if (a < b + c and b < a + c and c < a + b):
+    try:
         return a + b + c
-    else:
+    except:
         return "Triangle doesn't exist"
