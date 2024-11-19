@@ -48,7 +48,7 @@ def test_incorrect_figure_params_1():
         func = "area"
         sides = [8]
 
-        res = calc(fig, func, sides)
+        calc(fig, func, sides)
 
         assert str(e.value) == "Not correct figure name"
 
@@ -59,7 +59,7 @@ def test_incorrect_figure_params_2():
         func = "areo"
         sides = [8]
 
-        res = calc(fig, func, sides)
+        calc(fig, func, sides)
 
         assert str(e.value) == "Not correct function name"
 
@@ -70,7 +70,7 @@ def test_incorrect_figure_params_3():
         func = "perimetr"
         sides = [19]
 
-        res = calc(fig, func, sides)
+        calc(fig, func, sides)
 
         assert str(e.value) == "Not correct figure name"
 
@@ -81,7 +81,7 @@ def test_incorrect_figure_params_4():
         func = "area"
         sides = [3 , 5]
 
-        res = calc(fig, func, sides)
+        calc(fig, func, sides)
 
         assert str(e.value) == "Too many figure sides to calc"
 
@@ -92,6 +92,6 @@ def test_incorrect_figure_params_5():
         func = "area"
         sides = []
 
-        res = calc(fig, func, sides)
+        calc(fig, func, sides)
 
         assert str(e.value) == "No figure sides inputed"

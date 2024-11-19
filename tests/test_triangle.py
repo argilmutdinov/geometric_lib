@@ -18,7 +18,7 @@ def test_circle_area_2():
         b_side = 4
         c_side = 6
 
-        res = triangle.area(a_side, b_side, c_side)
+        triangle.area(a_side, b_side, c_side)
 
         assert str(e.value) == "Triangle doesn't exist"
 
