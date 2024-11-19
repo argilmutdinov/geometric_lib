@@ -1,4 +1,5 @@
 from calculate import calc
+import pytest
 
 
 def test_correct_figure_params_1():
@@ -42,50 +43,55 @@ def test_correct_figure_params_4():
 
 
 def test_incorrect_figure_params_1():
-    fig = "cirkle"
-    func = "area"
-    sides = [8]
+    with pytest.raises(Exception) as e:
+        fig = "cirkle"
+        func = "area"
+        sides = [8]
 
-    res = calc(fig, func, sides)
+        res = calc(fig, func, sides)
 
-    assert res == "Not correct figure name"
+        assert str(e.value) == "Not correct figure name"
 
 
 def test_incorrect_figure_params_2():
-    fig = "circle"
-    func = "areo"
-    sides = [8]
+    with pytest.raises(Exception) as e:
+        fig = "circle"
+        func = "areo"
+        sides = [8]
 
-    res = calc(fig, func, sides)
+        res = calc(fig, func, sides)
 
-    assert res == "Not correct function name"
+        assert str(e.value) == "Not correct function name"
 
 
 def test_incorrect_figure_params_3():
-    fig = "squre"
-    func = "perimetr"
-    sides = [19]
+    with pytest.raises(Exception) as e:
+        fig = "squre"
+        func = "perimetr"
+        sides = [19]
 
-    res = calc(fig, func, sides)
+        res = calc(fig, func, sides)
 
-    assert res == "Not correct figure name"
+        assert str(e.value) == "Not correct figure name"
 
 
 def test_incorrect_figure_params_4():
-    fig = "square"
-    func = "area"
-    sides = [3 , 5]
+    with pytest.raises(Exception) as e:
+        fig = "square"
+        func = "area"
+        sides = [3 , 5]
 
-    res = calc(fig, func, sides)
+        res = calc(fig, func, sides)
 
-    assert res == "Too many figure sides to calc"
+        assert str(e.value) == "Too many figure sides to calc"
 
 
 def test_incorrect_figure_params_5():
-    fig = "square"
-    func = "area"
-    sides = []
+    with pytest.raises(Exception) as e:
+        fig = "square"
+        func = "area"
+        sides = []
 
-    res = calc(fig, func, sides)
+        res = calc(fig, func, sides)
 
-    assert res == "No figure sides inputed"
+        assert str(e.value) == "No figure sides inputed"

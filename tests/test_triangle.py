@@ -1,4 +1,5 @@
 import triangle
+import pytest
 
 
 def test_circle_area_1():
@@ -12,13 +13,14 @@ def test_circle_area_1():
 
 
 def test_circle_area_2():
-    a_side = 2
-    b_side = 4
-    c_side = 6
+    with pytest.raises(Exception) as e:
+        a_side = 2
+        b_side = 4
+        c_side = 6
 
-    res = triangle.area(a_side, b_side, c_side)
+        res = triangle.area(a_side, b_side, c_side)
 
-    assert res == "Triangle doesn't exist"
+        assert str(e.value) == "Triangle doesn't exist"
 
 
 def test_circle_perimeter_1():
